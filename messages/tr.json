@@ -1,4 +1,8 @@
 {
+  "Metadata": {
+    "title": "DawnWave | Unutulmaz Oyun Deneyimleri Yaratıyoruz",
+    "description": "DawnWave, Wishes of Dawn oyununu geliştiren bağımsız bir oyun stüdyosu. Ekibimizle tanışın, bize katılın ve iletişime geçin."
+  },
   "Home": {
     "title": "DawnWave'e Hoş Geldiniz",
     "about": "Oyun sektöründe yenilikçi bir bakış açısıyla, oyuncularımıza en unutulmaz deneyimleri sunmak için çalışıyoruz. Teknolojiyi ve yaratıcılığı birleştirerek, oyun dünyasında yeni dalgalar oluşturmayı amaçlıyoruz. Hayal gücünüzün sınırlarını zorlayacak oyunlar geliştirmek için buradayız",
@@ -126,7 +130,9 @@
       "contact": "İletişim",
       "gameServers": "Oyun Sunucularımız",
       "cs2server": "Counter-Strike 2"
-    }
+    },
+    "menu": "Menü",
+    "language": "Dil"
   },
   "Footer": {
     "Link": {
@@ -178,5 +184,20 @@
         "noip": "Ip Adresi Mevcut Değil"
       }
     }
+  },
+  "Validation": {
+    "nameMin": "Ad en az 2 karakter olmalıdır.",
+    "nameMax": "Ad en fazla 50 karakter olabilir.",
+    "surnameMin": "Soyad en az 2 karakter olmalıdır.",
+    "surnameMax": "Soyad en fazla 50 karakter olabilir.",
+    "email": "Geçersiz e-posta adresi.",
+    "subjectMin": "Konu en az 3 karakter olmalıdır.",
+    "subjectMax": "Konu en fazla 150 karakter olabilir.",
+    "messageMin": "Mesaj en az 10 karakter olmalıdır.",
+    "messageMax": "Mesaj en fazla 5000 karakter olabilir.",
+    "singleLine": "Bu alan tek satır olmalıdır."
+  },
+  "Videos": {
+    "play": "Videoyu oynat"
   }
 }

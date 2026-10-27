@@ -1,14 +1,14 @@
 .FormCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   height: 100%;
 }
 
 .FormCardHighlighted2 {
   border-radius: 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   height: 100%;
 }
@@ -25,14 +25,14 @@
 .SubscribeCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   height: 100%;
 }
 
 .SubscribeCardHighlighted2 {
   border-radius: 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   height: 100%;
 }
@@ -55,14 +55,14 @@
 .JoinUsCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   height: 100%;
 }
 
 .JoinUsCardHighlighted2 {
   border-radius: 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   height: 100%;
 }
@@ -79,14 +79,14 @@
 .VerticalCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   height: 100%;
 }
 
 .VerticalCardHighlighted2 {
   border-radius: 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   height: 100%;
 }
@@ -103,14 +103,14 @@
 .HorizontalCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;
-  transition: all .5s;
+  transition: all 0.5s;
   width: 100%;
   height: 100%;
 }
 
 .HorizontalCardHighlighted2 {
   border-radius: 20px;
-  transition: all .2s;
+  transition: all 0.2s;
   width: 100%;
   height: 100%;
 }
@@ -123,4 +123,3 @@
 .HorizontalCardHighlighted:hover {
   box-shadow: 0 0 30px 3px var(--color-highlight);
 }
-

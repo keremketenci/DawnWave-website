@@ -1,54 +1,28 @@
-// translations
-import { useTranslations } from 'next-intl';
-
-import React from 'react';
-
 // styles
-import styles from '@/components/ui/button/ButtonSocials.module.css';
-
-// components ui
-import { toast } from 'sonner';
+import styles from "@/components/ui/button/ButtonSocials.module.css";
 
 // components
-import { Icon } from '@/components/Icon';
+import { Icon, type IconName } from "@/components/ui/Icon";
 
+// hooks & utils
+import { cn } from "@/lib/utils";
 
-interface ButtonSocialsProps {
-    link: string;
-    logoClass?: string;
-    icon: string;
-    iconClass?: string;
-    isActive: boolean;
-    onClick?: () => void;
+export function socialButtonClass(icon: IconName, isActive: boolean) {
+  return cn(isActive ? styles.ButtonSocials : "inline-block", styles[`ButtonSocials-${icon}`]);
 }
 
-export const ButtonSocials: React.FC<ButtonSocialsProps> = ({ link, icon, iconClass, isActive, onClick }) => {
-    const t2 = useTranslations("Toast");
+interface ButtonSocialsProps {
+  href: string;
+  label?: string;
+  icon: IconName;
+  iconClass?: string;
+  isActive: boolean;
+}
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        if (onClick) {
-            event.preventDefault();
-            navigator.clipboard.writeText(link);
-            if (link.includes('@')) {
-                toast(`${t2('CardTeam.Email.Copy.success')}`);
-            }
-            else if (link.includes('#')) {
-                toast(`${t2('CardTeam.Email.Copy.nolink')}`);
-            }
-            else {
-                toast(`${t2('CardTeam.Email.Copy.noemail')}`);
-            }
-            onClick();
-        }
-    };
-
-    const buttonClassName = `${isActive ? styles["ButtonSocials"] : ''} ${styles[`ButtonSocials-${icon}`]}`;
-
-    return (
-        <button onClick={handleClick} className={buttonClassName} title={link}>
-            <a href={link}>
-                <Icon name={icon} className={`${iconClass} ${styles["ButtonSocials-icon"]}`} />
-            </a>
-        </button>
-    );
-};
+export function ButtonSocials({ href, label, icon, iconClass, isActive }: ButtonSocialsProps) {
+  return (
+    <a href={href} className={socialButtonClass(icon, isActive)} title={href} aria-label={label}>
+      <Icon name={icon} className={iconClass} />
+    </a>
+  );
+}

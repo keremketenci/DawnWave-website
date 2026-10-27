@@ -7,8 +7,19 @@
   display: block;
 }
 
+/* Visually hidden but still focusable, so the menu can be opened with the keyboard. */
 .ButtonNav input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ButtonNav:has(input:focus-visible) {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
 }
 
 .ButtonNav span {
@@ -21,7 +32,7 @@
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .ButtonNav span:nth-of-type(1) {

@@ -1,0 +1,35 @@
+const icons = {
+  instagram: "/icons/socials/instagram.svg",
+  instagram2: "/icons/socials/instagram2.svg",
+  github: "/icons/socials/github.svg",
+  github2: "/icons/socials/github2.svg",
+  linkedin: "/icons/socials/linkedin.svg",
+  linkedin2: "/icons/socials/linkedin2.svg",
+  mail2: "/icons/socials/mail2.svg",
+  patreon: "/icons/socials/patreon.svg",
+  itchio: "/icons/socials/itchio.svg",
+  artstation: "/icons/socials/artstation.svg",
+  discord: "/icons/socials/discord.svg",
+  youtube: "/icons/socials/youtube.svg",
+  x: "/icons/socials/x.svg",
+  tr: "/icons/languages/tr.svg",
+  en: "/icons/languages/en.svg",
+  clock: "/icons/clock.svg",
+} as const;
+
+export type IconName = keyof typeof icons;
+
+interface IconProps {
+  name: IconName;
+  className?: string;
+  /** Leave empty for decorative icons (the parent should carry the label). */
+  alt?: string;
+}
+
+export function Icon({ name, className, alt = "" }: IconProps) {
+  return (
+    // Small static SVGs: next/image would not optimise them anyway.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src={icons[name]} alt={alt} className={className} decoding="async" />
+  );
+}

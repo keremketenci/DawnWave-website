@@ -3,58 +3,76 @@ import "../globals.css";
 
 // next
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 // fonts
 import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 
 // translations
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+
+// i18n
+import { routing } from "@/i18n/routing";
 
 // components
-import { Navbar } from "@/components/Navbar/Navbar";
+import { BackgroundPattern } from "@/components/effects/BackgroundPattern";
+import { scrollRevealScript } from "@/components/effects/reveal";
+import { ScrollReveal } from "@/components/effects/ScrollReveal";
+import { Navbar } from "@/components/layout/Navbar";
 
 // components ui
-import "@/components/ui/Pattern.css";
-import { Toaster } from "@/components/shadcn/ui/sonner";
+import { Toaster } from "@/components/ui/shadcn/sonner";
+
+// hooks & utils
+import { siteConfig } from "@/lib/site";
+
+const inter = Inter({ subsets: ["latin", "latin-ext"] });
+
+// Only these namespaces are needed by client components.
+const CLIENT_NAMESPACES = ["Navbar", "Contact", "Subscribe", "Toast", "Validation"] as const;
 
 export const metadata: Metadata = {
-  title: 'DawnWave',
-  description: 'Creating Unforgettable Game Experiences',
-  icons: {
-    icon: '/favicon.ico',
-  },
+  metadataBase: new URL(siteConfig.url),
+  applicationName: siteConfig.name,
 };
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({ children, params }: LayoutProps<"/[locale]">) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const messages = await getMessages();
+  const clientMessages = Object.fromEntries(CLIENT_NAMESPACES.map((ns) => [ns, messages[ns]]));
 
   return (
-    <html lang={locale}>
+    // suppressHydrationWarning: the inline script adds a class to <html> before hydration.
+    <html lang={locale} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: scrollRevealScript }} />
+      </head>
       <body className={`${inter.className} relative bg-background text-white`}>
-        <header className="fixed top-0 left-0 w-full shadow-md z-10">
-          <NextIntlClientProvider messages={messages}>
-            <Navbar className={`bg-black text-white flex w-screen p-4 px-4 md:px-24 lg:px-48`}/>
-          </NextIntlClientProvider>
-        </header>
-        <div className="relative">
-          {/* Background pattern */}
-          <div className="bg-pattern" />
-          {/* Main content */}
-          <main className="relative z-0">
-            <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider messages={clientMessages}>
+          <header className="fixed top-0 left-0 w-full shadow-md z-10">
+            <Navbar className="bg-black text-white flex w-screen p-4 px-4 md:px-24 lg:px-48" />
+          </header>
+          <div className="relative">
+            {/* Background pattern */}
+            <BackgroundPattern />
+            {/* Main content */}
+            <main className="relative z-0">
               {children}
               <Toaster className="dark" />
-            </NextIntlClientProvider>
-          </main>
-        </div>
+              <ScrollReveal />
+            </main>
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

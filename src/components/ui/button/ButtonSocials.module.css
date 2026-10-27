@@ -46,11 +46,11 @@
 }
 
 .ButtonSocials-patreon {
-  background: #F44336
+  background: #f44336;
 }
 
 .ButtonSocials-itchio {
-  background: #FA5C5C
+  background: #fa5c5c;
 }
 
 .ButtonSocials-whatsapp {
@@ -67,7 +67,7 @@
   position: absolute;
   width: 55px;
   height: 55px;
-  background-color: var(--color-gray-900);
+  background-color: var(--color-card-background);
   border-radius: 50px;
   z-index: -1;
   border: 0px solid rgba(255, 255, 255, 0.411);

@@ -1,182 +1,203 @@
 {
-    "Home": {
-        "title": "Welcome to DawnWave",
-        "about": "With an innovative perspective in the gaming industry, we work to provide our players with the most memorable experiences. By combining technology and creativity, we aim to create new waves in the gaming world. We are here to develop games that push the limits of your imagination",
-        "Donate": {
-            "title": "Support Us",
-            "text": "To support us and contribute to our projects, you can donate using the links below"
-        }
+  "Metadata": {
+    "title": "DawnWave | Creating Unforgettable Game Experiences",
+    "description": "DawnWave is an independent game studio developing Wishes of Dawn. Meet our team, join us and get in touch."
+  },
+  "Home": {
+    "title": "Welcome to DawnWave",
+    "about": "With an innovative perspective in the gaming industry, we work to provide our players with the most memorable experiences. By combining technology and creativity, we aim to create new waves in the gaming world. We are here to develop games that push the limits of your imagination",
+    "Donate": {
+      "title": "Support Us",
+      "text": "To support us and contribute to our projects, you can donate using the links below"
+    }
+  },
+  "Team": {
+    "Roles": {
+      "co-founder": "Co-Founder",
+      "employee": "Employee"
     },
-    "Team": {
-        "Roles": {
-            "co-founder": "Co-Founder",
-            "employee": "Employee"
-        },
-        "Job": {
-            "Title": {
-                "3d artist": "3D Artist",
-                "2d artist": "2D Artist",
-                "developer": "Developer",
-                "designer": "Designer",
-                "software developer": "Software Developer",
-                "web developer": "Web Developer",
-                "game developer": "Game Developer",
-                "game designer": "Game Designer"
-            },
-            "software": "Software",
-            "web": "Web"
-        },
-        "wanted": "WANTED"
+    "Job": {
+      "Title": {
+        "3d artist": "3D Artist",
+        "2d artist": "2D Artist",
+        "developer": "Developer",
+        "designer": "Designer",
+        "software developer": "Software Developer",
+        "web developer": "Web Developer",
+        "game developer": "Game Developer",
+        "game designer": "Game Designer"
+      },
+      "software": "Software",
+      "web": "Web"
     },
-    "JoinUs": {
-        "title": "We Are Looking for Team Members",
-        "Job": {
-            "Title": {
-                "3d artist": "3D Artist",
-                "2d artist": "2D Artist",
-                "software developer": "Software Developer",
-                "web developer": "Web Developer",
-                "game developer": "Game Developer",
-                "game designer": "Game Designer"
-            },
-            "Time": {
-                "fullTime": "Full Time",
-                "partTime": "Part Time",
-                "hybrid": "Hybrid"
-            },
-            "Type": {
-                "freelance": "Freelance",
-                "volunteer": "Volunteer"
-            },
-            "content": "We are looking for team members to work on our game Wishes of Dawn. As an incubation team at DawnWave, we continue to seek investors for our project Wishes of Dawn. We are looking for colleagues who will start as volunteers and later work as full-time employees after incorporation, providing opportunities for those who cannot develop portfolios due to lack of employment in the gaming industry"
-        },
-        "Button": {
-            "apply": "Apply"
-        }
+    "wanted": "WANTED"
+  },
+  "JoinUs": {
+    "title": "We Are Looking for Team Members",
+    "Job": {
+      "Title": {
+        "3d artist": "3D Artist",
+        "2d artist": "2D Artist",
+        "software developer": "Software Developer",
+        "web developer": "Web Developer",
+        "game developer": "Game Developer",
+        "game designer": "Game Designer"
+      },
+      "Time": {
+        "fullTime": "Full Time",
+        "partTime": "Part Time",
+        "hybrid": "Hybrid"
+      },
+      "Type": {
+        "freelance": "Freelance",
+        "volunteer": "Volunteer"
+      },
+      "content": "We are looking for team members to work on our game Wishes of Dawn. As an incubation team at DawnWave, we continue to seek investors for our project Wishes of Dawn. We are looking for colleagues who will start as volunteers and later work as full-time employees after incorporation, providing opportunities for those who cannot develop portfolios due to lack of employment in the gaming industry"
     },
-    "Contact": {
-        "title": "Contact Us",
-        "Card": {
-            "Content": {
-                "Mail": {
-                    "contact": "contact",
-                    "domain": "dawnwave.com"
-                },
-                "phone": "(+90) 539 671 27 93",
-                "address": "Muallimköy Mah, Deniz Cad. No:143/8, 1.1.C1 Blok Zemin Kat Kapı No: Z01 | Gebze/Kocaeli"
-            },
-            "Description": {
-                "mail": "E-Mail",
-                "phone": "Phone",
-                "address": "Address"
-            }
+    "Button": {
+      "apply": "Apply"
+    }
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "Card": {
+      "Content": {
+        "Mail": {
+          "contact": "contact",
+          "domain": "dawnwave.com"
         },
-        "Form": {
-            "label": {
-                "firstName": "First Name",
-                "lastName": "Last Name",
-                "email": "Email",
-                "subject": "Subject",
-                "message": "Message"
-            },
-            "input-placeholder": {
-                "firstName": "First Name",
-                "lastName": "Last Name",
-                "email": "example@example.com",
-                "subject": "Subject",
-                "message": "Message..."
-            },
-            "input-description": {
-                "firstName": "Your First Name",
-                "lastName": "Your Last Name",
-                "email": "Your Email Address",
-                "subject": "Subject of Your Email",
-                "message": "Your Message"
-            },
-            "Button": {
-                "submit": "SUBMIT",
-                "sending": "Sending..."
-            }
+        "phone": "(+90) 539 671 27 93",
+        "address": "Muallimköy Mah, Deniz Cad. No:143/8, 1.1.C1 Blok Zemin Kat Kapı No: Z01 | Gebze/Kocaeli"
+      },
+      "Description": {
+        "mail": "E-Mail",
+        "phone": "Phone",
+        "address": "Address"
+      }
+    },
+    "Form": {
+      "label": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+      },
+      "input-placeholder": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "example@example.com",
+        "subject": "Subject",
+        "message": "Message..."
+      },
+      "input-description": {
+        "firstName": "Your First Name",
+        "lastName": "Your Last Name",
+        "email": "Your Email Address",
+        "subject": "Subject of Your Email",
+        "message": "Your Message"
+      },
+      "Button": {
+        "submit": "SUBMIT",
+        "sending": "Sending..."
+      }
+    }
+  },
+  "Subscribe": {
+    "title": "Subscribe",
+    "description": "Subscribe to our newsletter to stay updated on our new projects and announcements",
+    "Form": {
+      "label": {
+        "email": "Email"
+      },
+      "input-placeholder": {
+        "email": "example@example.com"
+      },
+      "input-description": {
+        "email": "Your Email Address"
+      }
+    },
+    "Button": {
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing"
+    }
+  },
+  "Navbar": {
+    "Link": {
+      "home": "Home",
+      "team": "Team",
+      "joinUs": "Join Us",
+      "contact": "Contact",
+      "gameServers": "Game Servers",
+      "cs2server": "Counter-Strike 2"
+    },
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "Footer": {
+    "Link": {
+      "home": "Home",
+      "team": "Team",
+      "joinUs": "Join Us",
+      "contact": "Contact"
+    },
+    "Copyright": {
+      "copyright": "Copyright",
+      "allRightsReserved": "All Rights Reserved",
+      "year": "2024"
+    },
+    "Domain": {
+      "text": "dawnwave.com.tr",
+      "link": "https://dawnwave.com.tr"
+    },
+    "studio": "DawnWave",
+    "designBy": "Designed By",
+    "developedBy": "Developed By"
+  },
+  "Toast": {
+    "CardTeam": {
+      "Email": {
+        "Copy": {
+          "success": "Email Address Copied",
+          "failed": "Email Address Could Not Copy. Please try again",
+          "nolink": "Link Not Available",
+          "noemail": "Email Address Not Available"
         }
+      }
+    },
+    "ContactForm": {
+      "Email": {
+        "success": "Your Message Was Successfully Sent",
+        "failed": "Your Message Could Not Be Sent. Please try again later"
+      }
     },
     "Subscribe": {
-        "title": "Subscribe",
-        "description": "Subscribe to our newsletter to stay updated on our new projects and announcements",
-        "Form": {
-            "label": {
-                "email": "Email"
-            },
-            "input-placeholder": {
-                "email": "example@example.com"
-            },
-            "input-description": {
-                "email": "Your Email Address"
-            }
-        },
-        "Button": {
-            "subscribe": "Subscribe",
-            "subscribing": "Subscribing"
-        }
+      "Email": {
+        "success": "Successfully Subscribed",
+        "failed": "Subscription Failed. Please try again later"
+      }
     },
-    "Navbar": {
-        "Link": {
-            "home": "Home",
-            "team": "Team",
-            "joinUs": "Join Us",
-            "contact": "Contact",
-            "gameServers": "Game Servers",
-            "cs2server": "Counter-Strike 2"
-        }
-    },
-    "Footer": {
-        "Link": {
-            "home": "Home",
-            "team": "Team",
-            "joinUs": "Join Us",
-            "contact": "Contact"
-        },
-        "Copyright": {
-            "copyright": "Copyright",
-            "allRightsReserved": "All Rights Reserved",
-            "year": "2024"
-        },
-        "Domain": {
-            "text": "dawnwave.com.tr",
-            "link": "https://dawnwave.com.tr"
-        },
-        "studio": "DawnWave",
-        "designBy": "Designed By",
-        "developedBy": "Developed By"
-    },
-    "Toast": {
-        "CardTeam": {
-            "Email": {
-                "Copy": {
-                    "success": "Email Address Copied",
-                    "failed": "Email Address Could Not Copy. Please try again",
-                    "nolink": "Link Not Available",
-                    "noemail": "Email Address Not Available"
-                }
-            }
-        },
-        "ContactForm": {
-            "Email": {
-                "success": "Your Message Was Successfully Sent",
-                "failed": "Your Message Could Not Be Sent. Please try again later"
-            }
-        },
-        "Subscribe": {
-            "Email": {
-                "success": "Successfully Subscribed",
-                "failed": "Subscription Failed. Please try again later"
-            }
-        },
-        "GameServers": {
-            "ServerIp": {
-                "success": "Server Ip Successfully Copied",
-                "failed": "Server Ip Could Not Copy. Please try again",
-                "noip": "Ip Address Not Available"
-            }
-        }
+    "GameServers": {
+      "ServerIp": {
+        "success": "Server Ip Successfully Copied",
+        "failed": "Server Ip Could Not Copy. Please try again",
+        "noip": "Ip Address Not Available"
+      }
     }
+  },
+  "Validation": {
+    "nameMin": "Name must be at least 2 characters.",
+    "nameMax": "Name must be at most 50 characters.",
+    "surnameMin": "Surname must be at least 2 characters.",
+    "surnameMax": "Surname must be at most 50 characters.",
+    "email": "Invalid email address.",
+    "subjectMin": "Subject must be at least 3 characters.",
+    "subjectMax": "Subject must be at most 150 characters.",
+    "messageMin": "Message must be at least 10 characters.",
+    "messageMax": "Message must be at most 5000 characters.",
+    "singleLine": "This field must be a single line."
+  },
+  "Videos": {
+    "play": "Play video"
+  }
 }

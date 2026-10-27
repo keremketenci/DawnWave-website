@@ -1,76 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
+/* Class-based dark mode, matching the previous `darkMode: ["class"]` setup. */
+@custom-variant dark (&:is(.dark *));
+
+/* Tailwind v4 only applies `hover:` on hover-capable devices; keep the v3 behaviour. */
+@custom-variant hover (&:hover);
+
+/* Brand colours. `static` keeps them on :root so CSS modules can use the variables too. */
+@theme static {
+  --color-primary: #4f1787;
+  --color-secondary: #180161;
+  --color-accent: #fb773c;
+  --color-highlight: #eb3678;
+  --color-highlight-dark: #eb36789d;
+  --color-purple: #956afa;
+  --color-background: #000000;
+  --color-card-background: #1a1a1a;
+}
+
+@theme {
+  --breakpoint-2xs: 300px;
+  --breakpoint-xs: 480px;
+
+  /* Tailwind v3 palette values, so colours stay identical after the v4 upgrade. */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-red-500: #ef4444;
+  --color-red-700: #b91c1c;
+  --color-red-900: #7f1d1d;
+}
+
+/* Tailwind v3 preflight compatibility. */
 @layer base {
-  :root {
-    --color-primary: #4F1787;
-    --color-secondary: #180161;
-    --color-accent: #FB773C;
-    --color-highlight: #EB3678;
-    --color-highlight-dark: #eb36789d;
-    --color-purple: #956afa;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 
-    --color-white: #FFFFFF;
-    --color-black: #000000;
-    --color-gray-900: #1a1a1a;
-    --color-slate-800: #1e293b;
-    --color-slate-950: #020617;
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
 
-    --bg-background: var(--color-black);
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
   }
 }
 
-@layer components {}
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
 
-@layer utilities {
-  .bg-primary {
-    background-color: var(--color-primary);
+/*
+ * Scroll reveal: elements with `data-reveal` fade/slide in when they enter the viewport
+ * (see components/effects/ScrollReveal.tsx). `reveal-ready` is set on <html> by an inline
+ * script before first paint and removed again if the observer never starts, so content is
+ * never hidden for visitors without JavaScript, search engines or reduced-motion users.
+ * `backwards` fill only applies during the delay, so hover transforms are not overridden.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-ready [data-reveal]:not([data-revealed]) {
+    opacity: 0;
   }
 
-  .text-primary {
-    color: var(--color-primary);
+  .reveal-ready [data-reveal][data-revealed] {
+    animation: reveal-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms) backwards;
   }
+}
 
-  .bg-secondary {
-    background-color: var(--color-secondary);
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
   }
-
-  .text-secondary {
-    color: var(--color-secondary);
+  to {
+    opacity: 1;
+    transform: none;
   }
-
-  .bg-accent {
-    background-color: var(--color-accent);
-  }
-
-  .text-accent {
-    color: var(--color-accent);
-  }
-  .text-purple {
-    color: var(--color-purple);
-  }
-
-  .bg-highlight {
-    background-color: var(--color-highlight);
-  }
-
-  .text-highlight {
-    color: var(--color-highlight);
-  }
-
-  .bg-background {
-    background-color: var(--color-black);
-  }
-
-  .bg-card-background{
-    background-color: var(--color-gray-900);
-  }
-
-  .text-background {
-    color: var(--color-black);
-  }
-
 }
 
 ::-webkit-scrollbar {
@@ -79,7 +108,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-background)
+  background: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {

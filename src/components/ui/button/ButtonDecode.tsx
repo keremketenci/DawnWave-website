@@ -1,19 +1,15 @@
-// react
-import React from 'react';
-
 // styles
-import styles from '@/components/ui/button/ButtonDecode.module.css';
+import styles from "@/components/ui/button/ButtonDecode.module.css";
 
-interface btnDecodeProps {
-    text: string;
+interface ButtonDecodeProps {
+  text: string;
 }
 
-export const ButtonDecode: React.FC<btnDecodeProps> = ({ text }) => {
-    return (
-        <button className={`${styles.ButtonDecode}`}>
-            <span>
-                {text}
-            </span>
-        </button>
-    );
-};
+/** Submit button with the "decoding" hover effect. */
+export function ButtonDecode({ text }: ButtonDecodeProps) {
+  return (
+    <button type="submit" className={styles.ButtonDecode}>
+      <span>{text}</span>
+    </button>
+  );
+}
