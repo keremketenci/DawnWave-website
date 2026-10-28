@@ -8,7 +8,8 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 import { cn } from "@/lib/utils";
 
 export function socialButtonClass(icon: IconName, isActive: boolean) {
-  return cn(isActive ? styles.ButtonSocials : "inline-block", styles[`ButtonSocials-${icon}`]);
+  // Brand colours only apply to the round (active) buttons; inactive ones are plain icons.
+  return isActive ? cn(styles.ButtonSocials, styles[`ButtonSocials-${icon}`]) : "inline-block";
 }
 
 interface ButtonSocialsProps {

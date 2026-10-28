@@ -1,8 +1,5 @@
-export const teamPhotos = [
-  "/images/carouselImages/1.png",
-  "/images/carouselImages/2.png",
-  "/images/carouselImages/3.jpg",
-];
+// Gallery photos (e.g. "/images/gallery/1.jpg"). The gallery is hidden while this is empty.
+export const galleryPhotos: string[] = [];
 
 export interface YouTubeVideo {
   id: string;

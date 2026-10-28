@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 interface CardHighlightedProps {
   divClass?: string;
   cardClass?: string;
-  cardType: "Form" | "Subscribe" | "JoinUs" | "Vertical" | "Horizontal";
+  cardType: "Form" | "Subscribe" | "Vertical" | "Horizontal";
 
   icon?: React.ReactNode;
   title?: React.ReactNode;

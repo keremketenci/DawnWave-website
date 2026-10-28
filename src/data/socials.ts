@@ -7,6 +7,23 @@ export interface SocialLink {
   iconClass: string;
 }
 
+// Shared by the footer / contact list and the home page buttons.
+const faceit: SocialLink = {
+  label: "FACEIT",
+  // TODO: replace with the DawnWave FACEIT hub / organizer page.
+  href: "https://www.faceit.com/",
+  icon: "faceit",
+  iconClass: "w-8",
+};
+
+const steam: SocialLink = {
+  label: "Steam",
+  // TODO: replace with the DawnWave Steam group / profile.
+  href: "https://steamcommunity.com/",
+  icon: "steam",
+  iconClass: "w-8",
+};
+
 export const studioSocials: SocialLink[] = [
   {
     label: "Instagram",
@@ -44,6 +61,8 @@ export const studioSocials: SocialLink[] = [
     icon: "x",
     iconClass: "w-8",
   },
+  faceit,
+  steam,
 ];
 
 export const supportLinks: SocialLink[] = [
@@ -59,6 +78,6 @@ export const supportLinks: SocialLink[] = [
     icon: "itchio",
     iconClass: "w-8",
   },
+  faceit,
+  steam,
 ];
-
-export const linkedInCompanyUrl = "https://www.linkedin.com/company/dawnwave-games/";

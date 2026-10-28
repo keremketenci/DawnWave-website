@@ -1,61 +1,28 @@
 {
   "Metadata": {
-    "title": "DawnWave | Unutulmaz Oyun Deneyimleri Yaratıyoruz",
-    "description": "DawnWave, Wishes of Dawn oyununu geliştiren bağımsız bir oyun stüdyosu. Ekibimizle tanışın, bize katılın ve iletişime geçin."
+    "title": "DawnWave | FACEIT Turnuvaları ve Airsoft Etkinlikleri",
+    "description": "DawnWave, FACEIT turnuvaları ve airsoft etkinlikleri düzenler. Takımımızla tanışın, Counter-Strike 2 sunucumuza katılın ve bizimle iletişime geçin."
   },
   "Home": {
     "title": "DawnWave'e Hoş Geldiniz",
-    "about": "Oyun sektöründe yenilikçi bir bakış açısıyla, oyuncularımıza en unutulmaz deneyimleri sunmak için çalışıyoruz. Teknolojiyi ve yaratıcılığı birleştirerek, oyun dünyasında yeni dalgalar oluşturmayı amaçlıyoruz. Hayal gücünüzün sınırlarını zorlayacak oyunlar geliştirmek için buradayız",
+    "about": "DawnWave, FACEIT turnuvaları ve airsoft etkinlikleri düzenleyen, topluluk odaklı bir organizasyondur. Rekabetçi Counter-Strike 2 maçlarından sahadaki taktik oyunlara kadar oyuncuları bir araya getiriyor, birlikte yarışıyor, eğleniyor ve topluluğumuzu büyütüyoruz",
     "Donate": {
       "title": "Destek Olun",
-      "text": "Bizi desteklemek ve projelerimize katkıda bulunmak için aşağıdaki bağlantılardan bağış yapabilirsiniz"
+      "text": "Turnuvalarımıza ve etkinliklerimize aşağıdaki bağlantılardan destek olabilirsiniz"
     }
   },
   "Team": {
+    "title": "Takımımız",
     "Roles": {
-      "co-founder": "Kurucu-Ortak",
-      "employee": "Çalışan"
-    },
-    "Job": {
-      "Title": {
-        "3d artist": "3D Sanatçısı",
-        "2d artist": "2D Sanatçısı",
-        "developer": "Geliştiricisi",
-        "designer": "Tasarımcısı",
-        "software developer": "Yazılım Geliştiricisi",
-        "web developer": "Web Geliştiricisi",
-        "game developer": "Oyun Geliştiricisi",
-        "game designer": "Oyun Tasarımcısı"
-      },
-      "software": "Yazılım",
-      "web": "Web"
-    },
-    "wanted": "ARANIYOR"
-  },
-  "JoinUs": {
-    "title": "Ekip Arkadaşları Arıyoruz",
-    "Job": {
-      "Title": {
-        "3d artist": "3D Sanatçısı",
-        "2d artist": "2D Sanatçısı",
-        "software developer": "Software Geliştirici",
-        "web developer": "Web Geliştiricisi",
-        "game developer": "Oyun Geliştiricisi",
-        "game designer": "Oyun Tasarımcısı"
-      },
-      "Time": {
-        "fullTime": "Tam Zamanlı",
-        "partTime": "Yarı Zamanlı",
-        "hybrid": "Hibrit"
-      },
-      "Type": {
-        "freelance": "Serbest Çalışma",
-        "volunteer": "Gönüllü"
-      },
-      "content": "Wishes of Dawn oyunumuz da çalışmak üzere ekip arkadaşları arayışı içerisindeyiz. Bir kuluçka ekibi olan DawnWave olarak projemiz Wishes of Dawn ile yatırımcı arayışımız sürüyor. İş bulamadığı için portföy geliştiremeyen oyun sektörü çalışanları için önce gönüllü başlayıp şirketleşme sonrasında tam zamanlı bir personel olarak çalışacak iş arkadaşları arıyoruz"
-    },
-    "Button": {
-      "apply": "Başvur"
+      "igl": "IGL",
+      "entry": "Entry",
+      "awper": "AWPer",
+      "rifler": "Rifler",
+      "lurker": "Lurker",
+      "support": "Support",
+      "anchor": "Anchor",
+      "standin": "Yedek Oyuncu",
+      "coach": "Koç"
     }
   },
   "Contact": {
@@ -105,7 +72,7 @@
   },
   "Subscribe": {
     "title": "Abone Olun",
-    "description": "Yeni projelerimizden ve güncellemelerimizden haberdar olmak için bültenimize abone olun",
+    "description": "Yaklaşan turnuva ve etkinliklerden ilk siz haberdar olmak için bültenimize abone olun",
     "Form": {
       "label": {
         "email": "E-Posta"
@@ -125,8 +92,7 @@
   "Navbar": {
     "Link": {
       "home": "Anasayfa",
-      "team": "Ekibimiz",
-      "joinUs": "Bize Katılın",
+      "team": "Takımımız",
       "contact": "İletişim",
       "gameServers": "Oyun Sunucularımız",
       "cs2server": "Counter-Strike 2"
@@ -137,8 +103,7 @@
   "Footer": {
     "Link": {
       "home": "Anasayfa",
-      "team": "Ekibimiz",
-      "joinUs": "Bize Katılın",
+      "team": "Takımımız",
       "contact": "İletişim"
     },
     "Copyright": {
@@ -155,16 +120,6 @@
     "developedBy": "Tarafından Geliştirildi"
   },
   "Toast": {
-    "CardTeam": {
-      "Email": {
-        "Copy": {
-          "success": "E-Mail Adresi Kopyalandı",
-          "failed": "E-Mail Adresi Kopyalanamadı. Lütfen tekrar deneyin",
-          "nolink": "Link Mevcut Değil",
-          "noemail": "E-Mail Adresi Mevcut Değil"
-        }
-      }
-    },
     "ContactForm": {
       "Email": {
         "success": "Mesajınız başarıyla gönderildi",

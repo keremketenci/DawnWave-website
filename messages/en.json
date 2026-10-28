@@ -1,61 +1,28 @@
 {
   "Metadata": {
-    "title": "DawnWave | Creating Unforgettable Game Experiences",
-    "description": "DawnWave is an independent game studio developing Wishes of Dawn. Meet our team, join us and get in touch."
+    "title": "DawnWave | FACEIT Tournaments & Airsoft Events",
+    "description": "DawnWave organizes FACEIT tournaments and airsoft events. Meet our team, join our Counter-Strike 2 server and get in touch."
   },
   "Home": {
     "title": "Welcome to DawnWave",
-    "about": "With an innovative perspective in the gaming industry, we work to provide our players with the most memorable experiences. By combining technology and creativity, we aim to create new waves in the gaming world. We are here to develop games that push the limits of your imagination",
+    "about": "DawnWave is a community-driven organization running FACEIT tournaments and airsoft events. From competitive Counter-Strike 2 matches to tactical games on the field, we bring players together to compete, have fun and grow as a community",
     "Donate": {
       "title": "Support Us",
-      "text": "To support us and contribute to our projects, you can donate using the links below"
+      "text": "You can support our tournaments and events through the links below"
     }
   },
   "Team": {
+    "title": "Our Team",
     "Roles": {
-      "co-founder": "Co-Founder",
-      "employee": "Employee"
-    },
-    "Job": {
-      "Title": {
-        "3d artist": "3D Artist",
-        "2d artist": "2D Artist",
-        "developer": "Developer",
-        "designer": "Designer",
-        "software developer": "Software Developer",
-        "web developer": "Web Developer",
-        "game developer": "Game Developer",
-        "game designer": "Game Designer"
-      },
-      "software": "Software",
-      "web": "Web"
-    },
-    "wanted": "WANTED"
-  },
-  "JoinUs": {
-    "title": "We Are Looking for Team Members",
-    "Job": {
-      "Title": {
-        "3d artist": "3D Artist",
-        "2d artist": "2D Artist",
-        "software developer": "Software Developer",
-        "web developer": "Web Developer",
-        "game developer": "Game Developer",
-        "game designer": "Game Designer"
-      },
-      "Time": {
-        "fullTime": "Full Time",
-        "partTime": "Part Time",
-        "hybrid": "Hybrid"
-      },
-      "Type": {
-        "freelance": "Freelance",
-        "volunteer": "Volunteer"
-      },
-      "content": "We are looking for team members to work on our game Wishes of Dawn. As an incubation team at DawnWave, we continue to seek investors for our project Wishes of Dawn. We are looking for colleagues who will start as volunteers and later work as full-time employees after incorporation, providing opportunities for those who cannot develop portfolios due to lack of employment in the gaming industry"
-    },
-    "Button": {
-      "apply": "Apply"
+      "igl": "IGL",
+      "entry": "Entry",
+      "awper": "AWPer",
+      "rifler": "Rifler",
+      "lurker": "Lurker",
+      "support": "Support",
+      "anchor": "Anchor",
+      "standin": "Stand-in",
+      "coach": "Coach"
     }
   },
   "Contact": {
@@ -105,7 +72,7 @@
   },
   "Subscribe": {
     "title": "Subscribe",
-    "description": "Subscribe to our newsletter to stay updated on our new projects and announcements",
+    "description": "Subscribe to our newsletter to hear about upcoming tournaments and events first",
     "Form": {
       "label": {
         "email": "Email"
@@ -126,7 +93,6 @@
     "Link": {
       "home": "Home",
       "team": "Team",
-      "joinUs": "Join Us",
       "contact": "Contact",
       "gameServers": "Game Servers",
       "cs2server": "Counter-Strike 2"
@@ -138,7 +104,6 @@
     "Link": {
       "home": "Home",
       "team": "Team",
-      "joinUs": "Join Us",
       "contact": "Contact"
     },
     "Copyright": {
@@ -155,16 +120,6 @@
     "developedBy": "Developed By"
   },
   "Toast": {
-    "CardTeam": {
-      "Email": {
-        "Copy": {
-          "success": "Email Address Copied",
-          "failed": "Email Address Could Not Copy. Please try again",
-          "nolink": "Link Not Available",
-          "noemail": "Email Address Not Available"
-        }
-      }
-    },
     "ContactForm": {
       "Email": {
         "success": "Your Message Was Successfully Sent",

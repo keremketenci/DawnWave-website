@@ -13,7 +13,7 @@ import type { Organization, WebSite, WithContext } from "schema-dts";
 import { routing } from "@/i18n/routing";
 
 // data
-import { teamPhotos, youTubeVideos } from "@/data/media";
+import { galleryPhotos, youTubeVideos } from "@/data/media";
 import { studioSocials, supportLinks } from "@/data/socials";
 
 // components
@@ -21,7 +21,6 @@ import { reveal } from "@/components/effects/reveal";
 import { Footer } from "@/components/layout/Footer";
 import { Contact } from "@/components/sections/Contact/Contact";
 import { Hero } from "@/components/sections/Hero";
-import { JoinUs } from "@/components/sections/JoinUs/JoinUs";
 import { Subscribe } from "@/components/sections/Subscribe/Subscribe";
 import { Team } from "@/components/sections/Team/Team";
 
@@ -83,7 +82,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     email: siteConfig.email,
     telephone: siteConfig.phone,
     address: { "@type": "PostalAddress", ...siteConfig.address },
-    sameAs: [...studioSocials, ...supportLinks].map((social) => social.href),
+    // Only real profile URLs (skips placeholder links that point to a site root).
+    sameAs: [...new Set([...studioSocials, ...supportLinks].map((social) => social.href))].filter(
+      (href) => new URL(href).pathname !== "/",
+    ),
   };
 
   const website: WithContext<WebSite> = {
@@ -112,20 +114,24 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <div className="mt-0 2xl:mt-32"></div>
 
       {/* Team Section */}
-      <section className="py-20 md:py-20 2xl:py-16" id="Team">
+      <section className="py-20 md:py-20 2xl:py-16 px-4 sm:px-8 lg:px-12" id="Team">
         <Team />
       </section>
 
       <div className="mt-24"></div>
 
-      {/* Team Photos Section */}
-      <section id="TeamPhotos">
-        <div className="w-full" {...reveal()}>
-          <CarouselImage images={teamPhotos} alt="DawnWave team photo" />
-        </div>
-      </section>
+      {/* Photo Gallery Section (hidden until photos are added in src/data/media.ts) */}
+      {galleryPhotos.length > 0 && (
+        <>
+          <section id="TeamPhotos">
+            <div className="w-full" {...reveal()}>
+              <CarouselImage images={galleryPhotos} alt="DawnWave photo" />
+            </div>
+          </section>
 
-      <div className="mt-48"></div>
+          <div className="mt-48"></div>
+        </>
+      )}
 
       {/* YouTube Video Section */}
       <section id="CarouselVideos">
@@ -134,13 +140,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </div>
       </section>
 
-      {/* JoinUs Section */}
-      <section
-        className="py-16 2xs:py-16 xs:py-44 sm:py-48 md:py-48 lg:py-56 xl:py-56 px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48"
-        id="JoinUs"
-      >
-        <JoinUs />
-      </section>
+      <div className="mt-32"></div>
 
       {/* Contact Section */}
       <section

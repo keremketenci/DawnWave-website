@@ -2,7 +2,6 @@
 export const navSections = [
   { id: "Home", key: "home" },
   { id: "Team", key: "team" },
-  { id: "JoinUs", key: "joinUs" },
   { id: "Contact", key: "contact" },
 ] as const;
 

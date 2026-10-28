@@ -53,6 +53,14 @@
   background: #fa5c5c;
 }
 
+.ButtonSocials-faceit {
+  background: #ff5500;
+}
+
+.ButtonSocials-steam {
+  background: linear-gradient(120deg, #1b2838, #2a475e);
+}
+
 .ButtonSocials-whatsapp {
   background: linear-gradient(120deg, #02ff2c, #008a12);
 }

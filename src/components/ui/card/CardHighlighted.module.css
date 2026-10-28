@@ -52,30 +52,6 @@
   box-shadow: 0 0 30px 3px var(--color-highlight);
 }
 
-.JoinUsCardHighlighted {
-  background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
-  border-radius: 21px;
-  transition: all 0.5s;
-  width: 100%;
-  height: 100%;
-}
-
-.JoinUsCardHighlighted2 {
-  border-radius: 20px;
-  transition: all 0.2s;
-  width: 100%;
-  height: 100%;
-}
-
-.JoinUsCardHighlighted2:hover {
-  transform: scaleX(0.99) scaleY(0.99);
-  border-radius: 18px;
-}
-
-.JoinUsCardHighlighted:hover {
-  box-shadow: 0 0 30px 3px var(--color-highlight);
-}
-
 .VerticalCardHighlighted {
   background-image: linear-gradient(163deg, var(--color-highlight) 0%, var(--color-accent) 100%);
   border-radius: 21px;

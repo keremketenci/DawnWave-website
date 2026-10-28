@@ -1,43 +1,49 @@
+// translations
+import { getTranslations } from "next-intl/server";
+
+// data
+import { coaches, players, type TeamMember } from "@/data/team";
+
 // components
-import { CoFounderCard } from "@/components/sections/Team/CoFounderCard";
-// import { EmployeeCard } from "@/components/sections/Team/EmployeeCard";
-import { WantedCard } from "@/components/sections/Team/WantedCard";
+import { reveal } from "@/components/effects/reveal";
+import { TeamMemberCard } from "@/components/sections/Team/TeamMemberCard";
 
-// components ui
-import { Separator } from "@/components/ui/shadcn/separator";
+// One card per row on phones, then 2 / 3 / 5 per row. Width = (100% - gaps) / columns,
+// so an incomplete last row stays centred.
+const cardWidth =
+  "w-full max-w-[320px] xs:max-w-none xs:w-[calc((100%-1rem)/2)] md:w-[calc((100%-2rem)/3)] xl:w-[calc((100%-4rem)/5)]";
 
-export function Team() {
+async function TeamRow({ members }: { members: TeamMember[] }) {
+  const t = await getTranslations("Team.Roles");
+
   return (
-    <div>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-2 gap-y-4 lg:gap-y-0">
-          <CoFounderCard />
+    <div className="flex flex-wrap justify-center gap-4">
+      {members.map((member, index) => (
+        <div key={member.id} className={cardWidth} {...reveal((index % 5) * 100)}>
+          <TeamMemberCard member={member} role={member.roles.map((role) => t(role)).join(" / ")} />
         </div>
-      </div>
+      ))}
+    </div>
+  );
+}
 
-      <div className="mt-4 lg:mt-0"></div>
+export async function Team() {
+  const t = await getTranslations("Team");
 
-      <div className="flex justify-center">
-        <div className="flex flex-col">
-          <div className="col-span-full pb-4 lg:py-2 mx-1">
-            <Separator />
-          </div>
+  return (
+    <div className="mx-auto max-w-[1600px]">
+      <h2 {...reveal()} className="text-4xl font-bold text-center p-4 text-accent">
+        {t("title")}
+      </h2>
 
-          <div className="flex flex-col 2xl:flex-row">
-            {/* <div className="grid grid-cols-1 lg:flex lg:flex-row lg:justify-center gap-x-2 gap-y-4 2xl:gap-y-0">
-                <EmployeeCard />
-            </div> */}
+      <TeamRow members={players} />
 
-            {/* <div className="2xl:hidden col-span-full py-4 lg:py-2 mx-1">
-                <Separator />
-            </div> */}
-
-            <div className="grid grid-cols-1 lg:flex lg:justify-center lg:ml-2 gap-x-2 gap-y-4 2xl:gap-y-0">
-              <WantedCard />
-            </div>
-          </div>
+      {/* Coach row, shown once a coach is added in src/data/team.ts */}
+      {coaches.length > 0 && (
+        <div className="mt-8">
+          <TeamRow members={coaches} />
         </div>
-      </div>
+      )}
     </div>
   );
 }

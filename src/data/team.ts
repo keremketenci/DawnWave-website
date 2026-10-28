@@ -1,102 +1,94 @@
 import type { IconName } from "@/components/ui/Icon";
-import { linkedInCompanyUrl } from "@/data/socials";
 
-/** Keys of the `Team` messages namespace used to build role descriptions. */
-export type TeamRoleKey =
-  | "Roles.co-founder"
-  | "Job.Title.3d artist"
-  | "Job.Title.2d artist"
-  | "Job.Title.developer"
-  | "Job.Title.game developer"
-  | "Job.Title.game designer"
-  | "Job.software"
-  | "Job.web";
+/** CS2 roles: keys of the `Team.Roles` messages namespace. */
+export type PlayerRoleKey =
+  "igl" | "entry" | "awper" | "rifler" | "lurker" | "support" | "anchor" | "standin" | "coach";
 
+/**
+ * A team member card shows, top to bottom: photo, nick, name, role(s), social links.
+ * `name` (real name) is shown under the nick; comment it out to hide it.
+ * Several roles are joined with " / " (e.g. IGL / AWPer).
+ */
 export interface TeamMember {
-  name: string;
-  image: string;
-  /** Segments are joined with " & ", keys inside a segment with a space. */
-  role: TeamRoleKey[][];
+  /** Stable key for React lists. */
+  id: string;
+  /** Real name, shown under the nick. Comment it out to hide it. */
+  name?: string;
+  /** In-game nickname. */
+  nick: string;
+  roles: PlayerRoleKey[];
+  /** Profile photo. A placeholder silhouette is shown when it is missing. */
+  image?: string;
   links: { icon: IconName; href: string }[];
-  email?: string;
 }
 
-export const coFounders: TeamMember[] = [
+// TODO: replace the placeholder nicks, roles and the FACEIT / Steam profile links.
+
+/** Players, left to right. Five per row on desktop. */
+export const players: TeamMember[] = [
   {
+    id: "emirhan",
     name: "Emirhan YAMAN",
-    image: "/images/team/pp_emirhan.png",
-    role: [["Roles.co-founder"], ["Job.Title.game developer"]],
+    nick: "nacho",
+    roles: ["entry", "igl"],
     links: [
-      { icon: "instagram2", href: "https://www.instagram.com/emir.yaman57/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/emirymn/" },
-      { icon: "github2", href: "https://github.com/emirymn" },
+      { icon: "faceit", href: "https://www.faceit.com/" },
+      { icon: "steam", href: "https://steamcommunity.com/" },
     ],
-    email: "emirhanyaman@dawnwave.com.tr",
   },
   {
+    id: "mertcan",
     name: "Mert Can DOĞAN",
-    image: "/images/team/pp_mert.png",
-    role: [["Roles.co-founder"], ["Job.Title.game developer"]],
+    nick: "eco",
+    roles: ["entry"],
     links: [
-      { icon: "instagram2", href: "https://www.instagram.com/ecostavakya/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/ecostavakya/" },
-      { icon: "github2", href: "https://github.com/Ecostavakya" },
+      { icon: "faceit", href: "https://www.faceit.com/" },
+      { icon: "steam", href: "https://steamcommunity.com/" },
     ],
-    email: "mertcandogan@dawnwave.com.tr",
   },
   {
-    name: "Mustafa Yusuf AKSU",
-    image: "/images/team/pp_mustafa.png",
-    role: [["Roles.co-founder"], ["Job.Title.game developer"]],
+    id: "kerimcan",
+    name: "Kerimcan KÖTAN",
+    nick: "fallen",
+    roles: ["rifler", "lurker"],
     links: [
-      { icon: "instagram2", href: "https://www.instagram.com/mustafayusufaksu/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/mustafa-yusuf-aksu/" },
-      { icon: "github2", href: "https://github.com/ALTENALT" },
+      { icon: "faceit", href: "https://www.faceit.com/" },
+      { icon: "steam", href: "https://steamcommunity.com/" },
     ],
-    email: "myusufaksu@dawnwave.com.tr",
-  },
-];
-
-// Currently not shown on the site (see the commented-out block in Team.tsx).
-export const employees: TeamMember[] = [
-  {
-    name: "Enes ÇAĞATAY",
-    image: "/images/team/pp_enes.png",
-    role: [["Job.Title.3d artist"]],
-    links: [
-      { icon: "instagram2", href: "https://www.instagram.com/nott.ns/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/enes-%C3%A7a%C4%9Fatay/" },
-      { icon: "artstation", href: "https://www.artstation.com/enescagatay" },
-    ],
-    email: "enescagatay2@gmail.com",
   },
   {
-    name: "Fatma Nur ŞEN",
-    image: "/images/team/pp_nur.png",
-    role: [["Job.Title.2d artist"]],
+    id: "sina",
+    name: "Sina Kop",
+    nick: "nebuchOVL",
+    roles: ["support"],
     links: [
-      { icon: "instagram2", href: "https://www.instagram.com/4iko.miru/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/fatma-nur-%C5%9Fen-22729a224/" },
-      { icon: "artstation", href: "https://www.artstation.com/reicchi" },
+      { icon: "faceit", href: "https://www.faceit.com/" },
+      { icon: "steam", href: "https://steamcommunity.com/" },
     ],
-    email: "fatma.nursenn@outlook.com",
   },
   {
+    id: "kerem",
     name: "Kerem KETENCİ",
-    image: "/images/team/pp_kerem.jpg",
-    role: [["Job.software"], ["Job.web", "Job.Title.developer"]],
+    nick: "kerm3",
+    roles: ["anchor"],
     links: [
-      { icon: "instagram2", href: "https://www.instagram.com/realkeremketenci/" },
-      { icon: "linkedin2", href: "https://www.linkedin.com/in/kerem-ketenci/" },
-      { icon: "github2", href: "https://github.com/keremketenci" },
+      { icon: "faceit", href: "https://www.faceit.com/" },
+      { icon: "steam", href: "https://steamcommunity.com/" },
     ],
-    email: "keremketenci.dev@protonmail.com",
   },
 ];
 
-export const wantedRoles: { role: TeamRoleKey; href: string }[] = [
-  { role: "Job.Title.game designer", href: linkedInCompanyUrl },
-  { role: "Job.Title.3d artist", href: linkedInCompanyUrl },
+/** Coach(es), shown in a separate row below the players. Hidden while empty. */
+export const coaches: TeamMember[] = [
+  // {
+  //   id: "coach",
+  //   // name: "",
+  //   nick: "nick",
+  //   roles: ["coach"],
+  //   image: "/images/team/pp_coach.png",
+  //   links: [
+  //     { icon: "faceit", href: "https://www.faceit.com/" },
+  //     { icon: "steam", href: "https://steamcommunity.com/" },
+  //   ],
+  // },
 ];
-
-export const wantedImage = "/images/dawnwave/logo.png";
