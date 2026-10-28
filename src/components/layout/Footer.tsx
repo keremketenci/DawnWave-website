@@ -6,7 +6,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 
 // data
 import { navSections } from "@/data/navigation";
-import { studioSocials } from "@/data/socials";
+import { studioSocials, supportLinks } from "@/data/socials";
 
 // components
 import { LabelAsync } from "@/components/effects/LabelAsync";
@@ -99,8 +99,8 @@ export async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center mb-0 lg:mb-2 gap-y-2 sm:gap-x-0 items-center">
-          {studioSocials.map((social) => (
+        <div className="flex flex-wrap justify-center mb-0 lg:mb-2 gap-2.5 items-center">
+          {[...studioSocials, ...supportLinks].map((social) => (
             <ButtonSocials
               key={social.icon}
               href={social.href}

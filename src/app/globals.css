@@ -7,6 +7,9 @@
 /* Tailwind v4 only applies `hover:` on hover-capable devices; keep the v3 behaviour. */
 @custom-variant hover (&:hover);
 
+/* Short landscape screens (e.g. 1366x768): used to keep a section within one screen. */
+@custom-variant short (@media (min-width: 768px) and (max-height: 820px));
+
 /* Brand colours: logo gold + warm amber/orange accent. `static` keeps them on :root for CSS modules too. */
 @theme static {
   --color-primary: #8a6a16;

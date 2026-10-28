@@ -11,7 +11,10 @@ export async function Contact() {
 
   return (
     <div>
-      <h2 {...reveal()} className="text-4xl font-bold text-center p-4 text-accent">
+      <h2
+        {...reveal()}
+        className="text-4xl font-bold text-center p-4 short:pt-1 short:pb-2 text-accent"
+      >
         {t("title")}
       </h2>
 

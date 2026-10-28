@@ -57,7 +57,7 @@ export function FormTextField<T extends FieldValues>({
       control={control}
       name={name}
       render={({ field, fieldState }) => (
-        <FormItem>
+        <FormItem className="short:space-y-1">
           <div className="flex justify-between items-end space-x-4">
             <FormLabel className={labelClass}>{label}</FormLabel>
             <div className="text-right">
@@ -66,7 +66,11 @@ export function FormTextField<T extends FieldValues>({
           </div>
           <FormControl>
             {multiline ? (
-              <Textarea className={inputClass} placeholder={placeholder} {...field} />
+              <Textarea
+                className={`${inputClass} short:min-h-16`}
+                placeholder={placeholder}
+                {...field}
+              />
             ) : (
               <Input
                 className={inputClass}

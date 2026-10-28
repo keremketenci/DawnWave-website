@@ -9,6 +9,7 @@ import { communityLinks, supportLinks, type SocialLink } from "@/data/socials";
 
 // components ui
 import { ButtonSocials } from "@/components/ui/button/ButtonSocials";
+import { Separator } from "@/components/ui/shadcn/separator";
 
 // hooks & utils
 import { siteConfig } from "@/lib/site";
@@ -39,9 +40,9 @@ export async function Hero() {
         <p className="text-gray-300">{`${t("Donate.text")}.`}</p>
 
         {/* Support platforms | community profiles */}
-        <div className="flex flex-wrap items-center justify-center lg:justify-start py-4 gap-2">
+        <div className="flex flex-wrap items-center justify-center lg:justify-start py-4 gap-3">
           {renderLinks(supportLinks)}
-          <span aria-hidden="true" className="mx-2 h-8 w-px bg-slate-700" />
+          <Separator orientation="vertical" className="mx-1 h-8 bg-slate-700" />
           {renderLinks(communityLinks)}
         </div>
       </div>

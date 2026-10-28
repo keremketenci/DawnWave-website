@@ -51,7 +51,7 @@ export async function ContactCard() {
 
       <Separator />
 
-      <div className="flex flex-wrap justify-center gap-y-2 sm:gap-x-0">
+      <div className="flex flex-wrap justify-center gap-2.5">
         {studioSocials.map((social) => (
           <ButtonSocials
             key={social.icon}
