@@ -1,3 +1,5 @@
+import { xHandle } from "@/data/socials";
+
 export const siteConfig = {
   name: "DawnWave",
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dawnwave.com.tr").replace(/\/+$/, ""),
@@ -12,5 +14,5 @@ export const siteConfig = {
     addressRegion: "Kocaeli",
     addressCountry: "TR",
   },
-  twitter: "@dawnwavegames",
+  twitter: `@${xHandle}`,
 } as const;

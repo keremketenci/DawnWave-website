@@ -10,20 +10,22 @@ export interface SocialLink {
 // Shared by the footer / contact list and the home page buttons.
 const faceit: SocialLink = {
   label: "FACEIT",
-  // TODO: replace with the DawnWave FACEIT hub / organizer page.
-  href: "https://www.faceit.com/",
+  href: "https://www.faceit.com/en/club/b07387af-3551-4466-bb6c-be6f12ff50e0",
   icon: "faceit",
   iconClass: "w-8",
 };
 
 const steam: SocialLink = {
   label: "Steam",
-  // TODO: replace with the DawnWave Steam group / profile.
-  href: "https://steamcommunity.com/",
+  href: "https://steamcommunity.com/groups/dawnwave",
   icon: "steam",
   iconClass: "w-8",
 };
 
+/** X (Twitter) username, also used for the twitter:site meta tag. */
+export const xHandle = "dawnwavegames";
+
+/** Every link in this file is the single source of truth: footer, home page and JSON-LD read from here. */
 export const studioSocials: SocialLink[] = [
   {
     label: "Instagram",
@@ -31,24 +33,24 @@ export const studioSocials: SocialLink[] = [
     icon: "instagram",
     iconClass: "w-8",
   },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/dawnwave-games/",
-    icon: "linkedin",
-    iconClass: "w-6",
-  },
+  // {
+  //   label: "LinkedIn",
+  //   href: "https://www.linkedin.com/company/dawnwave-games/",
+  //   icon: "linkedin",
+  //   iconClass: "w-6",
+  // },
   {
     label: "Discord",
     href: "https://discord.com/invite/W3Bn8AkWg3",
     icon: "discord",
     iconClass: "w-8",
   },
-  {
-    label: "GitHub",
-    href: "https://github.com/DawnWave-Studio",
-    icon: "github",
-    iconClass: "w-8",
-  },
+  // {
+  //   label: "GitHub",
+  //   href: "https://github.com/DawnWave-Studio",
+  //   icon: "github",
+  //   iconClass: "w-8",
+  // },
   {
     label: "YouTube",
     href: "https://www.youtube.com/channel/UCPafZ1CJUTh_ycPAseFqKxg",
@@ -57,7 +59,7 @@ export const studioSocials: SocialLink[] = [
   },
   {
     label: "X",
-    href: "https://x.com/dawnwavegames",
+    href: `https://x.com/${xHandle}`,
     icon: "x",
     iconClass: "w-8",
   },

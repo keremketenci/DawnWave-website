@@ -10,6 +10,7 @@ import { studioSocials } from "@/data/socials";
 
 // components
 import { LabelAsync } from "@/components/effects/LabelAsync";
+import { CurrentYear } from "@/components/layout/CurrentYear";
 
 // components ui
 import { ButtonSocials } from "@/components/ui/button/ButtonSocials";
@@ -85,7 +86,8 @@ export async function Footer() {
       <div className="flex flex-col-reverse mt-8 lg:mt-0 lg:flex-row justify-between items-center text-white">
         <div className="text-lg py-8 text-center">
           <div>
-            {` ${t("Copyright.copyright")} @ ${t("Copyright.year")} `}
+            {` ${t("Copyright.copyright")} @ `}
+            <CurrentYear fallback={new Date().getFullYear()} />{" "}
             <a
               href={t("Domain.link")}
               className="text-xl text-highlight"

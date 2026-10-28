@@ -6,5 +6,5 @@ export const navSections = [
 ] as const;
 
 export const gameServers = [
-  { id: "CS2Server", key: "cs2server", address: "connect 95.173.175.61" },
+  { id: "CS2Server", key: "cs2server", address: "connect cs2.dawnwave.com.tr" },
 ] as const;

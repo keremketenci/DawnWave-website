@@ -61,15 +61,6 @@
   background: linear-gradient(120deg, #1b2838, #2a475e);
 }
 
-.ButtonSocials-whatsapp {
-  background: linear-gradient(120deg, #02ff2c, #008a12);
-}
-
-.ButtonSocials-twitter {
-  background: rgb(69, 187, 255);
-  transform: scale(0.85);
-}
-
 .ButtonSocials::before {
   content: "";
   position: absolute;
