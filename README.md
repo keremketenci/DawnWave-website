@@ -2,7 +2,7 @@
 <p align="center">Welcome to the official website of DawnWave, where creativity meets innovation in game development.</p>
 
 <p align="center">
-  <a href="https://www.dawnwave.com.tr" title="Visit DawnWave">🌐 Website</a>
+  <a href="https://dawnwave.com.tr" title="Visit DawnWave">🌐 Website</a>
 </p>
 
 ## Tech stack

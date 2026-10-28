@@ -2,14 +2,19 @@ import "server-only";
 
 // Fixed-window rate limiter.
 //
-// If UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN are set, the counters live in
-// Upstash Redis (shared by every server instance). Otherwise, or if Redis is unreachable,
-// an in-memory counter is used, which only protects a single Node.js process.
+// If Upstash Redis REST credentials are set, the counters live in Redis (shared by every
+// server / serverless instance). The Vercel Marketplace integration provides them as
+// KV_REST_API_URL / KV_REST_API_TOKEN; a manual setup can use the UPSTASH_REDIS_REST_* names.
+// Otherwise, or if Redis is unreachable, an in-memory counter is used, which only protects
+// a single Node.js process (on Vercel each serverless instance has its own memory).
 
 type RateLimitResult = { ok: boolean; retryAfter: number };
 
-const redisUrl = process.env.UPSTASH_REDIS_REST_URL?.replace(/\/+$/, "");
-const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
+const redisUrl = (process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL)?.replace(
+  /\/+$/,
+  "",
+);
+const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
 
 async function redisRateLimit(
   url: string,

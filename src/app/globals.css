@@ -7,14 +7,14 @@
 /* Tailwind v4 only applies `hover:` on hover-capable devices; keep the v3 behaviour. */
 @custom-variant hover (&:hover);
 
-/* Brand colours. `static` keeps them on :root so CSS modules can use the variables too. */
+/* Brand colours (gold & black, from the logo). `static` keeps them on :root so CSS modules can use them too. */
 @theme static {
-  --color-primary: #4f1787;
-  --color-secondary: #180161;
-  --color-accent: #fb773c;
-  --color-highlight: #eb3678;
-  --color-highlight-dark: #eb36789d;
-  --color-purple: #956afa;
+  --color-primary: #8a6a16;
+  --color-secondary: #1a1405;
+  --color-accent: #e5bc45;
+  --color-highlight: #f5d469;
+  --color-highlight-dark: #b8912f;
+  --color-champagne: #d9c9a3;
   --color-background: #000000;
   --color-card-background: #1a1a1a;
 }

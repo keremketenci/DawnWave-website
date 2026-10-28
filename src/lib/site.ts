@@ -2,11 +2,13 @@ import { xHandle } from "@/data/socials";
 
 export const siteConfig = {
   name: "DawnWave",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.dawnwave.com.tr").replace(/\/+$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://dawnwave.com.tr").replace(/\/+$/, ""),
+  // Raster logo for JSON-LD, favicon and share images; the SVG is shown on the page.
   logo: "/images/brand/logo.png",
+  logoSvg: "/images/brand/logo.svg",
   logoSize: 1254,
   ogImage: { url: "/images/brand/og-image.png", width: 1200, height: 630 },
-  email: "contact@dawnwave.com",
+  email: "contact@dawnwave.com.tr",
   phone: "+905396712793",
   address: {
     streetAddress: "Muallimköy Mah, Deniz Cad. No:143/8, 1.1.C1 Blok Zemin Kat Kapı No: Z01",

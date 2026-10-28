@@ -65,8 +65,8 @@ export function CarouselImage({ images, alt }: CarouselImageProps) {
         ))}
       </CarouselContent>
       <div className="flex justify-center my-2">
-        <CarouselPrevious className="border-slate-800 bg-slate-950 text-white hover:bg-accent hover:text-white mx-1" />
-        <CarouselNext className="border-slate-800 bg-slate-950 text-white hover:bg-accent hover:text-white mx-1" />
+        <CarouselPrevious className="border-slate-800 bg-slate-950 text-white hover:bg-accent hover:text-black mx-1" />
+        <CarouselNext className="border-slate-800 bg-slate-950 text-white hover:bg-accent hover:text-black mx-1" />
       </div>
     </Carousel>
   );

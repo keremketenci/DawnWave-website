@@ -1,5 +1,12 @@
-// Gallery photos (e.g. "/images/gallery/1.jpg"). The gallery is hidden while this is empty.
-export const galleryPhotos: string[] = [];
+// Gallery photos in public/images/gallery. The gallery is hidden while this is empty.
+// Placeholders for now (random Unsplash photos via picsum.photos, Unsplash License).
+export const galleryPhotos: string[] = [
+  "/images/gallery/1.jpg",
+  "/images/gallery/2.jpg",
+  "/images/gallery/3.jpg",
+  "/images/gallery/4.jpg",
+  "/images/gallery/5.jpg",
+];
 
 export interface YouTubeVideo {
   id: string;

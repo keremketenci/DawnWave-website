@@ -37,19 +37,19 @@ export async function Footer() {
           text1: t("studio"),
           text1Class: "text-accent",
           text3: t("designBy"),
-          text3Class: "text-purple",
+          text3Class: "text-champagne",
           text2: "Kerem Ketenci",
           text2Class: "text-accent",
           text4: t("developedBy"),
-          text4Class: "text-purple",
+          text4Class: "text-champagne",
         }
       : {
           text1: t("designBy"),
-          text1Class: "text-purple",
+          text1Class: "text-champagne",
           text3: t("studio"),
           text3Class: "text-accent",
           text2: t("developedBy"),
-          text2Class: "text-purple",
+          text2Class: "text-champagne",
           text4: "Kerem Ketenci",
           text4Class: "text-accent",
         };
@@ -58,7 +58,8 @@ export async function Footer() {
     <div>
       <div className="flex justify-between items-center">
         <Image
-          src={siteConfig.logo}
+          src={siteConfig.logoSvg}
+          unoptimized
           alt={siteConfig.name}
           width={siteConfig.logoSize}
           height={siteConfig.logoSize}

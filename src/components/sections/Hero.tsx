@@ -59,7 +59,8 @@ export async function Hero() {
             }}
           />
           <Image
-            src={siteConfig.logo}
+            src={siteConfig.logoSvg}
+            unoptimized
             alt={siteConfig.name}
             width={siteConfig.logoSize}
             height={siteConfig.logoSize}
