@@ -98,5 +98,10 @@ Components are Server Components by default; `"use client"` is only used where s
 
 ## Content
 
-- Team members, open positions, social links and game servers live in `src/data/`.
+- Team members, social links, videos and game servers live in `src/data/`.
+- Images live in `public/images/`:
+  - `brand/logo.png` – current logo, `brand/logo-legacy.png` – previous (game studio) logo,
+    `brand/og-image.png` – social share image (1200×630)
+  - `team/default-avatar.jpg` – shown on team cards without their own photo
+- The favicon and Apple touch icon are `src/app/favicon.ico` and `src/app/apple-icon.png`.
 - Texts live in `messages/en.json` and `messages/tr.json` (both files must have the same keys).

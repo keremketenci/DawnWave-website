@@ -42,20 +42,23 @@ export async function Hero() {
       {/* Image Section */}
       <div className="flex justify-center items-center w-full lg:w-1/3 lg:mb-12">
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+          {/* Gold glow behind the logo, slightly larger so it shows around the badge */}
+          <div
+            aria-hidden="true"
+            className="absolute -inset-[6%] rounded-full blur-2xl opacity-40"
+            style={{
+              background:
+                "radial-gradient(circle at center, #f5d469 0%, #d4a62a 45%, rgba(138, 106, 22, 0.6) 65%, transparent 72%)",
+            }}
+          />
           <Image
             src={siteConfig.logo}
             alt={siteConfig.name}
-            width={1000}
-            height={1000}
+            width={siteConfig.logoSize}
+            height={siteConfig.logoSize}
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 448px, (min-width: 640px) 384px, 320px"
             preload
-            className="w-full h-auto"
-          />
-          <div
-            className="absolute inset-0 bg-transparent rounded-full blur-xl opacity-10 z-0"
-            style={{
-              background: "radial-gradient(circle at center, #00ffff, #ff00ff, #ff6600)",
-            }}
+            className="relative w-full h-auto"
           />
         </div>
       </div>

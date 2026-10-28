@@ -17,12 +17,13 @@ export interface TeamMember {
   /** In-game nickname. */
   nick: string;
   roles: PlayerRoleKey[];
-  /** Profile photo. A placeholder silhouette is shown when it is missing. */
+  /** Profile photo. Falls back to `defaultAvatar` when missing. */
   image?: string;
   links: { icon: IconName; href: string }[];
 }
 
-// TODO: replace the placeholder nicks, roles and the FACEIT / Steam profile links.
+/** Shown on every card that has no `image` of its own. */
+export const defaultAvatar = "/images/team/default-avatar.jpg";
 
 /** Players, left to right. Five per row on desktop. */
 export const players: TeamMember[] = [
@@ -32,8 +33,8 @@ export const players: TeamMember[] = [
     nick: "nacho",
     roles: ["entry", "igl"],
     links: [
-      { icon: "faceit", href: "https://www.faceit.com/" },
-      { icon: "steam", href: "https://steamcommunity.com/" },
+      { icon: "faceit", href: "https://www.faceit.com/en/players/nach0-" },
+      { icon: "steam", href: "https://steamcommunity.com/id/inachokado" },
     ],
   },
   {
@@ -42,8 +43,8 @@ export const players: TeamMember[] = [
     nick: "eco",
     roles: ["entry"],
     links: [
-      { icon: "faceit", href: "https://www.faceit.com/" },
-      { icon: "steam", href: "https://steamcommunity.com/" },
+      { icon: "faceit", href: "https://www.faceit.com/en/players/Eco_" },
+      { icon: "steam", href: "https://steamcommunity.com/id/profvicblamer" },
     ],
   },
   {
@@ -52,8 +53,8 @@ export const players: TeamMember[] = [
     nick: "fallen",
     roles: ["rifler", "lurker"],
     links: [
-      { icon: "faceit", href: "https://www.faceit.com/" },
-      { icon: "steam", href: "https://steamcommunity.com/" },
+      { icon: "faceit", href: "https://www.faceit.com/en/players/fallenreal" },
+      { icon: "steam", href: "https://steamcommunity.com/id/fallennv2" },
     ],
   },
   {
@@ -62,8 +63,8 @@ export const players: TeamMember[] = [
     nick: "nebuchOVL",
     roles: ["support"],
     links: [
-      { icon: "faceit", href: "https://www.faceit.com/" },
-      { icon: "steam", href: "https://steamcommunity.com/" },
+      { icon: "faceit", href: "https://www.faceit.com/en/players/Ovl-DW" },
+      { icon: "steam", href: "https://steamcommunity.com/id/NebuchOwl" },
     ],
   },
   {
@@ -72,8 +73,8 @@ export const players: TeamMember[] = [
     nick: "kerm3",
     roles: ["anchor"],
     links: [
-      { icon: "faceit", href: "https://www.faceit.com/" },
-      { icon: "steam", href: "https://steamcommunity.com/" },
+      { icon: "faceit", href: "https://www.faceit.com/en/players/DW-Kerem" },
+      { icon: "steam", href: "https://steamcommunity.com/id/keremketenci/" },
     ],
   },
 ];

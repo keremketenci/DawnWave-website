@@ -59,8 +59,8 @@ export async function Footer() {
         <Image
           src={siteConfig.logo}
           alt={siteConfig.name}
-          width={1000}
-          height={1000}
+          width={siteConfig.logoSize}
+          height={siteConfig.logoSize}
           sizes="144px"
           className="w-36 h-auto lg:mb-0"
         />
