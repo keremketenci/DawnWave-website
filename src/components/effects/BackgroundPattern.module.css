@@ -11,6 +11,10 @@
  * The stripes live on an oversized pseudo-element that is moved with `transform`
  * (one 40px tile per cycle). This looks exactly like animating `background-position`,
  * but runs on the compositor instead of repainting the whole page every frame.
+ *
+ * The motion is slow (10px/s, far below 1px per frame). Firefox snaps axis-aligned
+ * layers to whole pixels, so the stripes would jump ~10 times a second and look
+ * choppy. The tiny rotation (invisible) makes it render sub-pixel positions smoothly.
  */
 .BackgroundPattern::before {
   content: "";
@@ -36,10 +40,10 @@
 
 @keyframes BackgroundPatternMove {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0) rotate(0.02deg);
   }
   to {
-    transform: translate3d(40px, 40px, 0);
+    transform: translate3d(40px, 40px, 0) rotate(0.02deg);
   }
 }
 
