@@ -43,7 +43,7 @@ export function CarouselYouTube({ videos, playLabel }: CarouselYouTubeProps) {
         {videos.map((video) => (
           <CarouselItem
             key={video.id}
-            className="flex items-center h-[400px] 2xs:h-[450px] xs:h-[500px] sm:h-[550px] md:h-[600px] lg:h-[700px]"
+            className="flex items-center h-[400px] 2xs:h-[450px] xs:h-[500px] sm:h-[550px] md:h-[min(700px,calc(100svh-10rem))]"
           >
             <YouTubeFacade id={video.id} title={video.title} playLabel={playLabel} />
           </CarouselItem>

@@ -50,7 +50,7 @@ export function CarouselImage({ images, alt }: CarouselImageProps) {
         {images.map((image, index) => (
           <CarouselItem
             key={image}
-            className="flex items-center w-full h-[210px] 2xs:h-[330px] xs:h-[440px] sm:h-[530px] md:h-[710px] basis-[100%] xl:basis-[80%]"
+            className="flex items-center w-full h-[210px] 2xs:h-[330px] xs:h-[440px] sm:h-[530px] md:h-[min(710px,calc(100svh-10rem))] basis-[100%] xl:basis-[80%]"
           >
             <div className="relative w-full h-full">
               <Image

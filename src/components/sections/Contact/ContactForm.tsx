@@ -75,38 +75,43 @@ export function ContactForm() {
         <div className="bg-card-background text-white rounded-3xl p-4 w-full">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 space-x-0">
-              <FormTextField
-                control={form.control}
-                name="name"
-                label={t("label.firstName")}
-                placeholder={t("input-placeholder.firstName")}
-                description={t("input-description.firstName")}
-                autoComplete="given-name"
-              />
-              <FormTextField
-                control={form.control}
-                name="surname"
-                label={t("label.lastName")}
-                placeholder={t("input-placeholder.lastName")}
-                description={t("input-description.lastName")}
-                autoComplete="family-name"
-              />
-              <FormTextField
-                control={form.control}
-                name="email"
-                type="email"
-                label={t("label.email")}
-                placeholder={t("input-placeholder.email")}
-                description={t("input-description.email")}
-                autoComplete="email"
-              />
-              <FormTextField
-                control={form.control}
-                name="subject"
-                label={t("label.subject")}
-                placeholder={t("input-placeholder.subject")}
-                description={t("input-description.subject")}
-              />
+              {/* Two columns on wider screens keeps the form within one screen */}
+              <div className="grid gap-3 md:grid-cols-2">
+                <FormTextField
+                  control={form.control}
+                  name="name"
+                  label={t("label.firstName")}
+                  placeholder={t("input-placeholder.firstName")}
+                  description={t("input-description.firstName")}
+                  autoComplete="given-name"
+                />
+                <FormTextField
+                  control={form.control}
+                  name="surname"
+                  label={t("label.lastName")}
+                  placeholder={t("input-placeholder.lastName")}
+                  description={t("input-description.lastName")}
+                  autoComplete="family-name"
+                />
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                <FormTextField
+                  control={form.control}
+                  name="email"
+                  type="email"
+                  label={t("label.email")}
+                  placeholder={t("input-placeholder.email")}
+                  description={t("input-description.email")}
+                  autoComplete="email"
+                />
+                <FormTextField
+                  control={form.control}
+                  name="subject"
+                  label={t("label.subject")}
+                  placeholder={t("input-placeholder.subject")}
+                  description={t("input-description.subject")}
+                />
+              </div>
               <FormTextField
                 control={form.control}
                 name="message"

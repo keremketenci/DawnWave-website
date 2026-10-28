@@ -14,28 +14,21 @@
   border-radius: 8px;
 }
 
+/* Each word is exactly one row tall, so translateY(-100%) moves by one whole word. */
 .LabelAsyncWords {
+  --label-row: 40px;
+  height: var(--label-row);
   overflow: hidden;
-  position: relative;
-}
-.LabelAsyncWords::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    var(--bg-color) 10%,
-    transparent 30%,
-    transparent 70%,
-    var(--bg-color) 90%
-  );
-  z-index: 20;
-  pointer-events: none;
+  /* Soft fade at the top and bottom edges while a word slides in or out. */
+  -webkit-mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent);
+  mask-image: linear-gradient(transparent, #000 25%, #000 75%, transparent);
 }
 
 .LabelAsyncWord {
   display: block;
-  height: 100%;
-  /* padding-left: 6px; */
+  height: var(--label-row);
+  line-height: var(--label-row);
+  white-space: nowrap;
   animation: spin_4991 8s infinite;
 }
 

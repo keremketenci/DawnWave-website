@@ -23,10 +23,10 @@ export function LabelAsync({
   text4Class,
 }: LabelAsyncProps) {
   return (
-    <div className="flex">
+    <div className="flex justify-center">
       <div className={``}>
         <div className={`${styles.LabelAsyncLoader} select-none`}>
-          <div className={`${styles.LabelAsyncWords} text-center`}>
+          <div className={`${styles.LabelAsyncWords} text-right`}>
             <span className={`${styles.LabelAsyncWord} ${text1Class}`}>{text1}</span>
             <a href="https://keremketenci.com" target="_blank" rel="noopener noreferrer">
               <span className={`${styles.LabelAsyncWord} ${text2Class}`}>{text2}</span>
@@ -41,7 +41,7 @@ export function LabelAsync({
       </div>
       <div className={``}>
         <div className={`${styles.LabelAsyncLoader} select-none`}>
-          <div className={`${styles.LabelAsyncWords} text-center`}>
+          <div className={`${styles.LabelAsyncWords} text-left`}>
             <span className={`${styles.LabelAsyncWord} ${text3Class}`}>{text3}</span>
             <a href="https://keremketenci.com" target="_blank" rel="noopener noreferrer">
               <span className={`${styles.LabelAsyncWord} ${text4Class}`}>{text4}</span>

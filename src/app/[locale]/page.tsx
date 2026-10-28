@@ -18,6 +18,7 @@ import { studioSocials, supportLinks } from "@/data/socials";
 
 // components
 import { reveal } from "@/components/effects/reveal";
+import { Section, sectionPadding } from "@/components/layout/Section";
 import { Footer } from "@/components/layout/Footer";
 import { Contact } from "@/components/sections/Contact/Contact";
 import { Hero } from "@/components/sections/Hero";
@@ -103,73 +104,49 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         dangerouslySetInnerHTML={{ __html: serializeJsonLd([organization, website]) }}
       />
 
-      {/* Home Section */}
-      <section
-        className="py-24 xs:py-16 sm:py-12 md:py-20 lg:py-0 px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48"
-        id="Home"
-      >
+      {/* Home */}
+      <Section id="Home" fullHeightOnMobile className={sectionPadding}>
         <Hero />
-      </section>
+      </Section>
 
-      <div className="mt-0 2xl:mt-32"></div>
-
-      {/* Team Section */}
-      <section className="py-20 md:py-20 2xl:py-16 px-4 sm:px-8 lg:px-12" id="Team">
+      {/* Team */}
+      <Section id="Team" className="px-4 sm:px-8 lg:px-12">
         <Team />
-      </section>
+      </Section>
 
-      <div className="mt-24"></div>
-
-      {/* Photo Gallery Section (hidden until photos are added in src/data/media.ts) */}
+      {/* Photo gallery (hidden until photos are added in src/data/media.ts) */}
       {galleryPhotos.length > 0 && (
-        <>
-          <section id="TeamPhotos">
-            <div className="w-full" {...reveal()}>
-              <CarouselImage images={galleryPhotos} alt="DawnWave photo" />
-            </div>
-          </section>
-
-          <div className="mt-48"></div>
-        </>
+        <Section id="Gallery">
+          <div className="w-full" {...reveal()}>
+            <CarouselImage images={galleryPhotos} alt="DawnWave photo" />
+          </div>
+        </Section>
       )}
 
-      {/* YouTube Video Section */}
-      <section id="CarouselVideos">
-        <div className="w-full h-full" {...reveal()}>
+      {/* YouTube videos */}
+      <Section id="Videos">
+        <div className="w-full" {...reveal()}>
           <CarouselYouTube videos={youTubeVideos} playLabel={tVideos("play")} />
         </div>
-      </section>
+      </Section>
 
-      <div className="mt-32"></div>
-
-      {/* Contact Section */}
-      <section
-        className="py-16 2xs:py-20 md:py-16 px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48"
-        id="Contact"
-      >
+      {/* Contact */}
+      <Section id="Contact" className={sectionPadding}>
         <Contact />
-      </section>
+      </Section>
 
-      <div className="mt-16"></div>
-
-      {/* Subscribe Section */}
-      <section id="Subscribe">
+      {/* Subscribe + footer share the last screen: newsletter centred, footer at the bottom */}
+      <section id="Subscribe" className="flex flex-col md:min-h-svh pt-24 md:pt-18">
         <div
           {...reveal()}
-          className="flex flex-col justify-center px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48"
+          className={`flex flex-1 flex-col justify-center py-12 ${sectionPadding}`}
         >
           <Subscribe />
         </div>
+        <footer {...reveal()} className={`pb-12 ${sectionPadding}`} id="Footer">
+          <Footer />
+        </footer>
       </section>
-
-      <div className="mt-32"></div>
-
-      {/* Footer Section */}
-      <footer {...reveal()} className="px-4 sm:px-16 md:px-24 xl:px-32 2xl:px-48" id="Footer">
-        <Footer />
-      </footer>
-
-      <div className="pt-12"></div>
     </div>
   );
 }

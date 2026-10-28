@@ -30,7 +30,7 @@ export async function Hero() {
   const t = await getTranslations("Home");
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen">
+    <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-12">
       {/* Text Section */}
       <div className="flex flex-col w-full lg:w-2/3 lg:pr-8 items-center lg:items-start text-center lg:text-left">
         <h1 className="text-4xl font-bold text-accent pb-6">{`${t("title")}!`}</h1>
@@ -49,13 +49,13 @@ export async function Hero() {
       {/* Image Section */}
       <div className="flex justify-center items-center w-full lg:w-1/3 lg:mb-12">
         <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-          {/* Gold glow behind the logo, slightly larger so it shows around the badge */}
+          {/* Warm gold/amber glow behind the logo, slightly larger so it shows around the badge */}
           <div
             aria-hidden="true"
-            className="absolute -inset-[6%] rounded-full blur-2xl opacity-40"
+            className="absolute -inset-[6%] rounded-full blur-2xl opacity-30"
             style={{
               background:
-                "radial-gradient(circle at center, #f5d469 0%, #d4a62a 45%, rgba(138, 106, 22, 0.6) 65%, transparent 72%)",
+                "radial-gradient(circle at center, #e5bc45 0%, #f29a38 45%, rgba(160, 82, 20, 0.6) 65%, transparent 72%)",
             }}
           />
           <Image

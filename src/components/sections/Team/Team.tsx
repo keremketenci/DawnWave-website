@@ -31,7 +31,7 @@ export async function Team() {
   const t = await getTranslations("Team");
 
   return (
-    <div className="mx-auto max-w-[1600px]">
+    <div className="mx-auto w-full max-w-[1600px]">
       <h2 {...reveal()} className="text-4xl font-bold text-center p-4 text-accent">
         {t("title")}
       </h2>
