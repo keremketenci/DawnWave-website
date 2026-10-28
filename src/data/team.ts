@@ -29,7 +29,7 @@ export const defaultAvatar = "/images/team/default-avatar.jpg";
 export const players: TeamMember[] = [
   {
     id: "emirhan",
-    name: "Emirhan YAMAN",
+    // name: "Emirhan YAMAN",
     nick: "nacho",
     roles: ["entry", "igl"],
     links: [
@@ -39,7 +39,7 @@ export const players: TeamMember[] = [
   },
   {
     id: "mertcan",
-    name: "Mert Can DOĞAN",
+    // name: "Mert Can DOĞAN",
     nick: "eco",
     roles: ["entry"],
     links: [
@@ -49,7 +49,7 @@ export const players: TeamMember[] = [
   },
   {
     id: "kerimcan",
-    name: "Kerimcan KÖTAN",
+    // name: "Kerimcan KÖTAN",
     nick: "fallen",
     roles: ["rifler", "lurker"],
     links: [
@@ -59,7 +59,7 @@ export const players: TeamMember[] = [
   },
   {
     id: "sina",
-    name: "Sina Kop",
+    // name: "Sina Kop",
     nick: "nebuchOVL",
     roles: ["support"],
     links: [
@@ -69,7 +69,7 @@ export const players: TeamMember[] = [
   },
   {
     id: "kerem",
-    name: "Kerem KETENCİ",
+    // name: "Kerem KETENCİ",
     nick: "kerm3",
     roles: ["anchor"],
     links: [

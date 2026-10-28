@@ -5,13 +5,26 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 // data
-import { supportLinks } from "@/data/socials";
+import { communityLinks, supportLinks, type SocialLink } from "@/data/socials";
 
 // components ui
 import { ButtonSocials } from "@/components/ui/button/ButtonSocials";
 
 // hooks & utils
 import { siteConfig } from "@/lib/site";
+
+function renderLinks(links: SocialLink[]) {
+  return links.map((link) => (
+    <ButtonSocials
+      key={link.icon}
+      href={link.href}
+      label={link.label}
+      icon={link.icon}
+      iconClass={link.iconClass}
+      isActive={true}
+    />
+  ));
+}
 
 export async function Hero() {
   const t = await getTranslations("Home");
@@ -25,17 +38,11 @@ export async function Hero() {
         <p className="text-highlight font-bold whitespace-nowrap">{t("Donate.title")}</p>
         <p className="text-gray-300">{`${t("Donate.text")}.`}</p>
 
-        <div className="flex justify-center lg:justify-start py-4 gap-2">
-          {supportLinks.map((link) => (
-            <ButtonSocials
-              key={link.icon}
-              href={link.href}
-              label={link.label}
-              icon={link.icon}
-              iconClass={link.iconClass}
-              isActive={true}
-            />
-          ))}
+        {/* Support platforms | community profiles */}
+        <div className="flex flex-wrap items-center justify-center lg:justify-start py-4 gap-2">
+          {renderLinks(supportLinks)}
+          <span aria-hidden="true" className="mx-2 h-8 w-px bg-slate-700" />
+          {renderLinks(communityLinks)}
         </div>
       </div>
 

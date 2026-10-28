@@ -65,6 +65,7 @@ export const studioSocials: SocialLink[] = [
   steam,
 ];
 
+/** Donation / support platforms. */
 export const supportLinks: SocialLink[] = [
   {
     label: "Patreon",
@@ -78,6 +79,7 @@ export const supportLinks: SocialLink[] = [
     icon: "itchio",
     iconClass: "w-8",
   },
-  faceit,
-  steam,
 ];
+
+/** Community profiles shown next to the support links on the home page. */
+export const communityLinks: SocialLink[] = [faceit, steam];
